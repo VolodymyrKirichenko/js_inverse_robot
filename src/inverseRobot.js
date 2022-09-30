@@ -24,7 +24,18 @@
  * @return {object}
  */
 function inverseRobot(robot) {
-  // write code here
+  // eslint-disable-next-line no-console
+  const object = {};
+
+  for (const key in robot) {
+    if (robot[key] in object) {
+      return null;
+    } else {
+      object[robot[key]] = key;
+    }
+  }
+
+  return object;
 }
 
 module.exports = inverseRobot;
