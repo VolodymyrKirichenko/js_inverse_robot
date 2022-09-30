@@ -24,15 +24,14 @@
  * @return {object}
  */
 function inverseRobot(robot) {
-  // eslint-disable-next-line no-console
   const object = {};
 
   for (const key in robot) {
     if (robot[key] in object) {
       return null;
-    } else {
-      object[robot[key]] = key;
     }
+
+    object[robot[key]] = key;
   }
 
   return object;
